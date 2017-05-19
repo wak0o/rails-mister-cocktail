@@ -1,16 +1,22 @@
-<div class="text-center padded">
-  <h1>Hello Index Root</h1>
-  <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+<div class="banner" style="background-image: url(assets/bar.jpg);">
+  <div class="banner-content">
+    <h1>Mister Cocktail</h1>
+    <h2><strong>Create your Cocktail</strong></h2>
+    <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
+  </div>
 </div>
+
 
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-4">
-      <!-- <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');"> -->
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
         <div class="card-description">
-          <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-          <p>Very cool stuff, useful and smart</p>
+          <h2 class="text-center"><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+          <% cocktail.doses.each do |dose| %>
+          <p><%= dose.description %> <%= dose.ingredient.name %></p>
+          <% end %>
         </div>
       </div>
     </div>

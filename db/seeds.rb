@@ -9,3 +9,8 @@
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "limes")
+Ingredient.create(name: "sugar")
+Ingredient.create(name: "white rum")
+Ingredient.create(name: "soda water")
+Ingredient.create(name: "mint sprig")

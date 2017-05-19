@@ -41,6 +41,7 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (7.1.1)
       execjs
+    awesome_link (0.0.6)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -193,6 +194,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  awesome_link
   better_errors
   binding_of_caller
   bootstrap-sass
